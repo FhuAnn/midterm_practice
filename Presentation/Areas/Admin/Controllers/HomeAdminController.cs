@@ -9,7 +9,7 @@ namespace Presentation.Areas.Admin.Controllers
     [Area("admin")]
     [Route("admin")]
     [Route("admin/homeadmin")]
-    public class HomeAdminController : Controller
+    public class HomeAdminController : Microsoft.AspNetCore.Mvc.Controller
     {
         QlbanVaLiContext db = new QlbanVaLiContext();   
         [Route("")]

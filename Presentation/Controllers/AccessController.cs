@@ -34,7 +34,7 @@ namespace Presentation.Controllers
 					} else
                     {
 						HttpContext.Session.SetString("UserName", u.Username.ToString());
-						return RedirectToAction("Index", "HomeAdmin");
+						return RedirectToAction("Index", "HomeAdmin", new {Area="Admin"});
 					}
                 }
             }
