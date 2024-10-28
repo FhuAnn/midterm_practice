@@ -9,7 +9,9 @@ using Presentation.Models;
 
 namespace Presentation.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("admin")]
+    [Route("admin")]
+    [Route("admin/manageuser")]
     public class TUsersController : Controller
     {
         private readonly QlbanVaLiContext _context;
@@ -20,6 +22,8 @@ namespace Presentation.Areas.Admin.Controllers
         }
 
         // GET: Admin/TUsers
+        [Route("")]
+        [Route("index")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.TUsers.ToListAsync());
